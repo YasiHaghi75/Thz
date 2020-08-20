@@ -19,5 +19,6 @@ To overcome this problem, we have taken a **sequential** approach. We use a sequ
 
 ## Dataset
 The dataset used in this project is obtained using [Terasense](https://terasense.com/) body scanner system. Subjects (with or without metallic object) were asked to walk from the distance of 3 meters (from camera lens) towards the scanner and their movement had been recording meanwhile. The output THz sequence of images is used to train and test the model.
+Below there is a sample of output THz image from a metallic object (right) and its corresponding visible light image in RGB (left). 
 
-
+![dataset sample](https://github.com/YasiHaghi75/Thz/blob/master/md_images/dataset1.png?raw=true)
