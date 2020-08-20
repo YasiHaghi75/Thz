@@ -7,8 +7,9 @@ Recently millimeter-wave imaging (Terahertz Imaging) has been very popular among
 
 ## Methodology
 There are two methods of THz imaging; 
-  1. active-mode 
-  2. passive-mode 
+  1. **active-mode**
+  2. **passive-mode**
+
 In this research **active mode** is used in which terahertz radiation of the external source is detected after back scattering from the object, therefore there is always a possibility for a metallic surface not to face any radiations as it is highly dependent on the angle between the radiations and metallic surface. This problem shows up in active terahertz imaging and therefore there are some frames containing metallic objects with no reflections. There is also a chance of reflections from human body organs in frames without any metallic objects.
 To overcome this problem, we have taken a **sequential** approach. We use a sequence of terahertz images to determine whether or not a person has critical metallic objects with him. As the detection of critical objects should be done in a very short time, we have used simple linear machine learning models, specifically **SVM**, to do the classification.
 
