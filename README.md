@@ -15,7 +15,11 @@ To overcome this problem, we have taken a **sequential** approach. We use a sequ
 
 ## Usage
 1. Create a Python environment and run `pip install -r requirements.txt`.
-2. Use the top-level python script for each method ...
+2. To test the max_mean_var model on your own experiment run test_max_mean_var.py as below:
+```
+python ./test_max_mean_var.py --model <path to the trained model> --scalar <path to the trained scalar> --trial <path to trial images directory>
+
+```
 
 ## Dataset
 The dataset used in this project is obtained using [Terasense](https://terasense.com/) body scanner system. Subjects (with or without metallic object) were asked to walk from the distance of 3 meters (from camera lens) towards the scanner and their movement had been recording meanwhile. The output THz sequence of images is used to train and test the model.
