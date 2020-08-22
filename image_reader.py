@@ -10,8 +10,8 @@ import pandas as pd
 def build_dataset(path_obj, path_noObj, n):
     dir_num_obj = len([name for name in os.listdir(path_obj) if os.path.isdir(path_obj + name)])
     dir_num_noObj = len([name for name in os.listdir(path_noObj) if os.path.isdir(path_noObj + name)])
-    train_list_obj = [3, 8, 13, 16]  # directory ID of object images used for training
-    train_list_noObj = [2, 5]  # directory ID of noObject images used for training
+    train_list_obj = [8, 13, 14, 15, 16]  # directory ID of object images used for training
+    train_list_noObj = [1, 5]  # directory ID of noObject images used for training
     step = n
 
     col_names = []
@@ -32,7 +32,7 @@ def build_dataset(path_obj, path_noObj, n):
                 data = cv2.imread(folder_path + str(i + idx) + '.jpg', -1)
                 feature_vec.append(np.max(data))
                 feature_vec.append(np.mean(data))
-                feature_vec.append(np.var(data)/255)
+                feature_vec.append(np.var(data))
             feature_vec.append(1)
             df = pd.DataFrame([feature_vec], columns=col_names)
             if directory in train_list_obj:
@@ -49,7 +49,7 @@ def build_dataset(path_obj, path_noObj, n):
                 data = cv2.imread(folder_path + str(i + idx) + '.jpg', -1)
                 feature_vec.append(np.max(data))
                 feature_vec.append(np.mean(data))
-                feature_vec.append(np.var(data)/255)
+                feature_vec.append(np.var(data))
             feature_vec.append(0)
             df = pd.DataFrame([feature_vec], columns=col_names)
             if directory in train_list_noObj:
